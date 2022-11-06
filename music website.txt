@@ -1,0 +1,157 @@
+
+ <!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <style>
+ 
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+ 
+        
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: url('https://images.unsplash.com/photo-1614149162883-504ce4d13909?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80');
+             
+            
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+ 
+        
+        .nav li {
+            float: right;
+            list-style: none;
+        }
+ 
+        
+        .nav a {
+            list-style: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1rem;
+            font-weight: 550;
+            display: block;
+            padding: 5px 35px;
+            color: White;
+            text-decoration: none;
+        }
+ 
+       
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 45%;
+        }
+ 
+        
+        .left-col {
+            margin-left: 11%;
+        }
+ 
+        
+        .left-col h1 {
+            font-size: 50px;
+            color: crimson;
+        }
+ 
+      
+        .right-col {
+            float: right;
+            margin-right: 10%;
+            margin-top: -5%;
+            display: flex;
+            align-items: center;
+        }
+ 
+        
+        .right-col p {
+            font-size: 21px;
+            color: black;
+            font-weight: 650;
+            margin-right: 20px;
+        }
+ 
+        
+        #icon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">ARTISTS</a></li>
+            <li><a href="#">MUSIC</a></li>
+            <li><a href="#">HOME</a></li>
+        </ul>
+    </div>
+ 
+    <div class="content">
+        <div class="left-col">
+            <h1 style="color:white;">MY <br> SOUNDS</h1>
+        </div>
+ 
+        <div class="right-col">
+             
+ 
+<p style="color:white;">Click Here To Listen Song 1</p>
+ <img src="play.png" id="icon">
+
+
+<p style="color:white;">Click Here To Listen Song 2</p>
+ <img src="play.png" id="icon 1">
+
+
+
+ 
+        </div>
+    </div>
+ 
+        
+ 
+    <audio id="mysound">
+        <source src="Gana.mp3" type="audio/mp3">
+    </audio>
+
+ <audio id="mysound">
+        <source src="Gana2.mp3" type="audio/mp3">
+    </audio>
+
+
+
+    <script>
+        var mysound = document.getElementById("mysound");
+        var icon = document.getElementById("icon");
+ 
+        var mysound = document.getElementById("mysound");
+        var icon = document.getElementById("icon 1");
+
+
+
+        icon.onclick = function() {
+            if (mysound.paused) {
+ 
+                
+                mysound.play();
+                icon.src ="pause.png";
+
+            } else {
+ 
+                
+                mysound.pause();
+                icon.src ="play.png";
+            }
+        }
+    </script>
+</body>
+ 
+</html>

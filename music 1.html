@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <style>
+ 
+        
+        * {
+            padding: 0;
+            margin: 0;
+        }
+ 
+        
+        .container {
+            height: 100vh;
+            width: 100%;
+            background-image: url('https://images.unsplash.com/photo-1614149162883-504ce4d13909?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1548&q=80');
+             
+            
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+ 
+        
+        .nav li {
+            float: right;
+            list-style: none;
+        }
+ 
+        
+        .nav a {
+            list-style: none;
+            height: 50px;
+            line-height: 50px;
+            font-size: 1rem;
+            font-weight: 550;
+            display: block;
+            padding: 5px 35px;
+            color: White;
+            text-decoration: none;
+        }
+ 
+       
+        .content {
+            width: 100%;
+            position: absolute;
+            top: 45%;
+        }
+ 
+        
+        .left-col {
+            margin-left: 11%;
+        }
+ 
+        
+        .left-col h1 {
+            font-size: 50px;
+            color: crimson;
+        }
+ 
+      
+        .right-col {
+            float: right;
+            margin-right: 10%;
+            margin-top: -200px;
+            display: flex;
+            align-items: center;
+           
+        }
+ 
+        
+        .right-col p {
+            font-size: 21px;
+            color: black;
+            font-weight: 650;
+            margin-right: 20px;
+            align-items: right;
+        }
+        
+       
+ 
+        
+        #icon {
+            cursor: pointer;
+        }
+    </style>
+</head>
+ 
+<body>
+    <div class="container">
+        <ul class="nav">
+            <li><a href="#">CONTACT</a></li>
+            <li><a href="#">ABOUT</a></li>
+            <li><a href="#">ARTISTS</a></li>
+            <li><a href="#">MUSIC</a></li>
+            <li><a href="#">HOME</a></li>
+        </ul>
+    </div>
+ 
+    <div class="content">
+        <div class="left-col">
+            <h1 style="color:white;">MY <br> SOUNDS</h1>
+        </div>
+ 
+        <div class="right-col">
+             
+ <ul>
+<p style="color:white;">Click Here To Listen Song 1</p>
+ <img src="play.png" id="icon">
+
+<br>
+<p style="color:white;">Click Here To Listen Song 2</p>
+ <img src="play.png" id="icon2">
+<br>
+ <p style="color:white;">Click Here To Listen Song 3</p>
+ <img src="play.png" id="icon3">
+<br>
+ <p style="color:white;">Click Here To Listen Song 4</p>
+ <img src="play.png" id="icon4">
+<br>
+ 
+<p style="color:white;">Click Here To Listen Song 5</p>
+ <img src="play.png" id="icon5">
+<br>
+</ul>
+ 
+
+        </div>
+    </div>
+ 
+        
+ 
+    <audio id="mysound">
+        <source src="Gana.mp3" type="audio/mp3">
+    </audio>
+
+ <audio id="mysound2">
+        <source src="Gana2.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="mysound3">
+        <source src="gana3.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="mysound4">
+        <source src="gana4.mp3" type="audio/mp3">
+    </audio>
+
+    <audio id="mysound5">
+        <source src="gana5.mp3" type="audio/mp3">
+    </audio>
+
+
+    <script>
+        var mysound = document.getElementById("mysound");
+        var icon = document.getElementById("icon");
+ 
+        var mysound = document.getElementById("mysound2");
+        var icon2 = document.getElementById("icon2");
+
+        var mysound = document.getElementById("mysound3");
+        var icon3 = document.getElementById("icon3");
+
+        var mysound = document.getElementById("mysound4");
+        var icon4 = document.getElementById("icon4");
+
+        var mysound = document.getElementById("mysound5");
+        var icon5 = document.getElementById("icon5");
+        icon.onclick = function() {
+            if (mysound.paused) {
+ 
+                
+                mysound.play();
+                icon.src ="pause.png";
+
+            } else {
+ 
+                
+                mysound.pause();
+                icon.src ="play.png";
+            }
+        }
+
+        icon2.onclick = function() {
+            if (mysound2.paused) {
+ 
+                
+                mysound2.play();
+                icon2.src ="pause.png";
+
+            } else {
+ 
+                
+                mysound2.pause();
+                icon2.src ="play.png";
+            }
+        }
+
+        icon3.onclick = function() {
+            if (mysound3.paused) {
+ 
+                
+                mysound3.play();
+                icon3.src ="pause.png";
+
+            } else {
+ 
+                
+                mysound3.pause();
+                icon3.src ="play.png";
+            }
+        }
+
+        icon4.onclick = function() {
+            if (mysound4.paused) {
+ 
+                
+                mysound4.play();
+                icon4.src ="pause.png";
+
+            } else {
+ 
+                
+                mysound4.pause();
+                icon4.src ="play.png";
+            }
+        }
+
+        icon5.onclick = function() {
+            if (mysound5.paused) {
+ 
+                
+                mysound5.play();
+                icon5.src ="pause.png";
+
+            } else {
+ 
+                
+                mysound5.pause();
+                icon5.src ="play.png";
+            }
+        }
+    </script>
+</body>
+ 
+</html>
